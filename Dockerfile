@@ -3,6 +3,7 @@ FROM maven:3.5-jdk-8-alpine as build
 COPY ./pom.xml /workspace/pom.xml
 COPY ./src /workspace/src
 COPY ./.git /workspace/.git
+COPY tools /workspace/tools
 WORKDIR /workspace
 RUN mvn install
 
